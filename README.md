@@ -1,1 +1,2 @@
-# dataStructures
+# List of Data Structures
+ - Array
