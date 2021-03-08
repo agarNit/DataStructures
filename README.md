@@ -2,3 +2,4 @@
  - Array
  - Stack
  - Queue
+ - Linked List
