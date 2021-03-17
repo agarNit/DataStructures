@@ -7,13 +7,6 @@ class node{
     node* link;
 };
 
-void display(node* n){
-    while(n!=NULL){
-        cout << n->value << " ";
-        n = n->link;
-    }
-    cout << endl;
-}
 int main(){
     node* first = NULL;
     node* second = NULL;
@@ -32,7 +25,10 @@ int main(){
     third-> value = 3;
     third-> link = NULL;
 
-    display(first);
-
+    while( first!=NULL){
+        cout << first-> value << " ";
+        first = first-> link;
+    }
+    cout << endl;
     return 0;
 }
