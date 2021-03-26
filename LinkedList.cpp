@@ -1,34 +1,42 @@
-#include <iostream>
-using namespace std;
+#include <bits/stdc++.h> 
+using namespace std; 
 
-class node{
-    public:
-    int value;
-    node* link;
-};
+class Node { 
+public: 
+	int data; 
+	Node* next; 
+}; 
 
-int main(){
-    node* first = NULL;
-    node* second = NULL;
-    node* third = NULL;
+void printList(Node* n) 
+{ 
+	while (n != NULL) { 
+		cout << n->data << " "; 
+		n = n->next; 
+	} 
+	cout << endl;
+} 
 
-    first = new node();
-    second = new node();
-    third = new node();
+int main() 
+{ 
+	Node* head = NULL; 
+	Node* second = NULL; 
+	Node* third = NULL; 
 
-    first-> value = 1;
-    first-> link = second;
-     
-    second-> value = 2;
-    second-> link = third;
+	head = new Node(); 
+	second = new Node(); 
+	third = new Node(); 
 
-    third-> value = 3;
-    third-> link = NULL;
+	head->data = 1;
+	head->next = second;
 
-    while( first!=NULL){
-        cout << first-> value << " ";
-        first = first-> link;
-    }
-    cout << endl;
-    return 0;
-}
+	second->data = 2; 
+	second->next = third; 
+
+	third->data = 3; 
+	third->next = NULL; 
+
+	printList(head); 
+
+	return 0; 
+} 
+
