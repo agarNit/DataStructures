@@ -14,6 +14,22 @@ void push(int val, Node** ref){
 	*ref = temp;
 }
 
+void append(int val, Node** ref){
+	Node* temp = new Node();
+	temp->data = val;
+	temp->next = NULL;
+	if (*ref == NULL)
+	{
+		*ref = temp;
+		return;
+	}
+	Node *last = *ref;
+	while (last->next != NULL)
+		last = last->next;
+	last->next = temp;
+	return;
+}
+
 void printList(Node* n) 
 { 
 	while (n != NULL) { 
@@ -39,6 +55,7 @@ int main()
 	third->next = NULL; 
 
 	push(0, &first);
+	append(4, &first);
 	printList(first); 
 
 	return 0; 
