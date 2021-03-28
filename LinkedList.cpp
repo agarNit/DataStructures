@@ -18,13 +18,9 @@ void printList(Node* n)
 
 int main() 
 { 
-	Node* first = NULL; 
-	Node* second = NULL; 
-	Node* third = NULL; 
-
-	first = new Node(); 
-	second = new Node(); 
-	third = new Node(); 
+	Node* first = new Node(); 
+	Node* second = new Node(); 
+	Node* third = new Node(); 
 
 	first->data = 1;
 	first->next = second;
