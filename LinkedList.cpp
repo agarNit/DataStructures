@@ -41,6 +41,16 @@ void insert(int val, Node* prev){
 	prev-> next = temp;
 }
 
+void deletenode(Node** ref,int val){
+	Node* temp = *ref;
+	Node* prev = NULL;
+
+	while(temp->data != val){
+		prev = temp;
+		temp = temp->next;
+	}
+	prev->next = temp->next;
+}
 void printList(Node* n) 
 { 
 	while (n != NULL) { 
@@ -68,6 +78,8 @@ int main()
 	push(0, &first);
 	append(4, &first);
 	insert(5,second);
+	printList(first);
+	deletenode(&first, 5);
 	printList(first); 
 
 	return 0; 
