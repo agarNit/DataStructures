@@ -7,6 +7,13 @@ public:
 	Node* next; 
 }; 
 
+void push(int val, Node** ref){
+	Node* temp = new Node();
+	temp->data = val;
+	temp->next = *ref;
+	*ref = temp;
+}
+
 void printList(Node* n) 
 { 
 	while (n != NULL) { 
@@ -31,6 +38,7 @@ int main()
 	third->data = 3; 
 	third->next = NULL; 
 
+	push(0, &first);
 	printList(first); 
 
 	return 0; 
