@@ -30,6 +30,17 @@ void append(int val, Node** ref){
 	return;
 }
 
+void insert(int val, Node* prev){
+	if(prev->next == NULL){
+		cout << "The previous node cannot be null";
+		return;
+	}
+	Node* temp = new Node();
+	temp-> data = val;
+	temp-> next = prev-> next;
+	prev-> next = temp;
+}
+
 void printList(Node* n) 
 { 
 	while (n != NULL) { 
@@ -56,6 +67,7 @@ int main()
 
 	push(0, &first);
 	append(4, &first);
+	insert(5,second);
 	printList(first); 
 
 	return 0; 
